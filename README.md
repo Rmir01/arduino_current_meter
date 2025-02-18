@@ -6,4 +6,7 @@ Misuratore di flussi di corrente realizzato con Arduino ATMega2560 e sensore di 
 creazione repository e consultazione datasheet ATMega2560
 
 17/02/2025:
-creazione file per misurazione della corrente, collaudo sensore
+scrittura programma per misurazione della corrente
+
+18/02/2025
+aggiunta bozza raccolta statistiche
