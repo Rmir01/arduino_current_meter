@@ -13,3 +13,6 @@ aggiunta bozza raccolta statistiche
 
 26/02/2025:
 avanzamento raccolta statistiche e implementazione timer
+
+27/02/2025:
+completamento e rifiniture
