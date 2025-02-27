@@ -35,7 +35,7 @@ void usart_init( uint16_t ubrr) {
     UBRR0L = (uint8_t)ubrr;
 
     UCSR0C = _BV(UCSZ01) | _BV(UCSZ00); /* 8-bit data */ 
-    UCSR0B = _BV(RXEN0) | _BV(TXEN0) | _BV(RXCIE0);   /* Enable RX and TX */  
+    UCSR0B = _BV(RXEN0) | _BV(TXEN0);   /* Enable RX and TX */  
 }
 void usart_putchar(char data) {
     // Wait for empty transmit buffer
