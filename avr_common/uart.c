@@ -3,6 +3,7 @@
 // Includes
 // ********************************************************************************
 #include <avr/io.h>
+#include <avr/iom2560.h>
 #include <avr/interrupt.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -10,6 +11,7 @@
 // Macros and Defines
 // ********************************************************************************
 #define BAUD 19600
+#define F_CPU 16000000UL
 #define MYUBRR F_CPU/16/BAUD-1
 // ********************************************************************************
 // Function Prototypes

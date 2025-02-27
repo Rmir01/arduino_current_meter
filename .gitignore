@@ -1,0 +1,5 @@
+.vscode
+Datasheet for ATmega2560.pdf
+*.o
+*.elf
+*.hex
