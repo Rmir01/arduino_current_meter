@@ -2,6 +2,7 @@
 	"C_Cpp.default.compilerPath": "/usr/bin/gcc",
 	"files.associations": {
 		"io90pwm3b.h": "c",
-		"interrupt.h": "c"
+		"interrupt.h": "c",
+		"string.h": "c"
 	}
 }

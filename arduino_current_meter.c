@@ -15,7 +15,7 @@ int main(void){
 	//initialize printf/uart
 	printf_init();
 	printf("Welcome in Arduino current meter! Available commands:\n");
-	printf("  oX = enable on-line mode, sampling every 1 <= X <= 9 seconds\n  h = last hour (60 minutes)\n  d = last day (24 hours)\n  m = last month (30 days)\n  y = last year (12 months)\n  c = clear statistics\n  x = display maximum value sampled until now\n");
+	printf("  oX = enable on-line mode, sampling every 1 <= X <= 9 seconds\n  h = last hour stats (60 minutes)\n  d = last day stats (24 hours)\n  m = last month stats (30 days)\n  y = last year stats (12 months)\n  c = clear statistics\n  max = maximum value sampled until now\n  q to quit\n");
 	//initialize ADC
 	adc_init();
 	
@@ -52,8 +52,7 @@ int main(void){
 				}
 			}
 		}
-
-		//commands from serial (cutecom)
+		//commands from client
 		get_command();
 	}
 }

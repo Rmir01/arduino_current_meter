@@ -10,7 +10,7 @@
 // ********************************************************************************
 // Macros and Defines
 // ********************************************************************************
-#define BAUD 19600
+#define BAUD 19200
 #define F_CPU 16000000UL
 #define MYUBRR F_CPU/16/BAUD-1
 // ********************************************************************************
@@ -29,13 +29,13 @@ static FILE mystdout = FDEV_SETUP_STREAM(usart_putchar_printf, NULL, _FDEV_SETUP
 // ********************************************************************************
 // usart Related
 // ********************************************************************************
-void usart_init( uint16_t ubrr) {
+void usart_init(uint16_t ubrr) {
     // Set baud rate
     UBRR0H = (uint8_t)(ubrr>>8);
     UBRR0L = (uint8_t)ubrr;
 
     UCSR0C = _BV(UCSZ01) | _BV(UCSZ00); /* 8-bit data */ 
-    UCSR0B = _BV(RXEN0) | _BV(TXEN0);   /* Enable RX and TX */  
+    UCSR0B = _BV(RXEN0) | _BV(TXEN0) | (1<<RXCIE0);   /* Enable RX and TX with RX interrupt*/  
 }
 void usart_putchar(char data) {
     // Wait for empty transmit buffer
